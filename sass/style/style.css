@@ -65,21 +65,31 @@
   justify-content: center;
   margin: 30px 0;
 }
-.weatherAppBox .weatherIcon i {
-  margin-bottom: 20px;
-  font-size: 130px;
+.weatherAppBox .weatherIcon #weatherImg {
+  margin-bottom: 5px;
+  font-size: 120px;
   color: white;
 }
-.weatherAppBox .weatherIcon #tempText {
+.weatherAppBox .weatherIcon .temp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.weatherAppBox .weatherIcon .temp #tempText {
   font-size: 70px;
 }
-.weatherAppBox .weatherIcon #tempText span {
+.weatherAppBox .weatherIcon .temp #span {
   font-size: 56px;
 }
 .weatherAppBox .weatherIcon #cityName {
   text-transform: uppercase;
   font-size: 25px;
   letter-spacing: 0.1em;
+  margin-bottom: 20px;
+}
+.weatherAppBox .weatherIcon #wetherCondition {
+  font-family: serif;
+  letter-spacing: 0.2em;
   margin-bottom: 20px;
 }
 .weatherAppBox .otherInformations {
@@ -96,7 +106,8 @@
 .weatherAppBox .otherInformations .Info i {
   font-size: 23px;
 }
-.weatherAppBox .otherInformations .Info #humidityText, .weatherAppBox .otherInformations .Info #windText {
+.weatherAppBox .otherInformations .Info #humidityText,
+.weatherAppBox .otherInformations .Info #windText {
   font-size: 20px;
 }
 .weatherAppBox .otherInformations .Info .nameType {

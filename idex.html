@@ -13,27 +13,31 @@
 
     <div class="container">
         <div class="weatherAppBox">
-            <div class="inPutAndBtn">
-                <input type="text" id="userInput" placeholder="Search">
-                <button id="userBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
-            </div>
+            <form class="inPutAndBtn" id="ChangeLocation">
+                <input type="text" id="userInput" name="city" autocomplete="off" placeholder="Search">
+                <button type="submit" id="userBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
             <div class="weatherIcon">
-                <i class="fa-solid fa-cloud-sun" id="weathIcon"></i>
-                <p id="tempText">22'<span>C</span></p>
-                <p id="cityName">New York</p>
+                <img  src="./images/clear.png" alt="weatherIcon"id="weatherImg" loading="lazy" width="100px" height="100px"/>
+                <!-- <i class="fa-solid fa-cloud-sun" id="weatherImg"></i> -->
+                <p id="wetherCondition">Nothing</p>
+                <div class="temp">
+                    <p id="tempText">0</p><span id="span">&deg;C</span>
+                </div>
+                <p id="cityName">City Name</p>
             </div>
             <div class="otherInformations">
                 <div class="Info">
                     <i class="fa-solid fa-water"></i>
                     <div class="textInfo">
-                        <p id="humidityText">64%</p>
+                        <p id="humidityText">0%</p>
                         <p class="nameType">Humidity</p>
                     </div>
                 </div>
                 <div class="Info">
                     <i class="fa-solid fa-wind"></i>
                     <div class="textInfo">
-                        <p id="windText">18 km/h</p>
+                        <p id="windText">0 km/h</p>
                         <p class="nameType">Wind Speed</p>
                     </div>
                 </div>
@@ -44,8 +48,8 @@
     <!-- body section end -->
     <!-- ================== -->
     <!-- Script files -->
-    <script src="./js/main.js"></script>
     <script src="./js/forecast.js"></script>
+    <script src="./js/main.js"></script>
     <!--  -->
   </body>
 </html>
