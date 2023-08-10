@@ -1,0 +1,99 @@
+@import "./global";
+@import "./mixins";
+// ====================>>
+
+.weatherAppBox {
+  background-image: linear-gradient(-33deg, #c06bff, #00ff84);
+  padding: 30px 40px;
+  border-radius: 7px;
+  color: white;
+
+  .inPutAndBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    input{
+        border: none;
+        outline: none;
+        padding: 10px 15px;
+        border-radius: 20px;
+        font-size: 16px;
+    }
+
+    button{
+        cursor: pointer;
+        border: none;
+        outline: none;
+        padding: 14px 15px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+        @include btn();
+
+        i{
+            color: #888;
+            transition: all 0.5s ease;
+            &:hover{
+                transform: scale(1.3);
+                color: #333;
+            }
+        }
+    }
+  }
+
+  .weatherIcon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0;
+
+    i{
+        margin-bottom: 20px;
+        font-size: 130px;
+        color: white;
+    }
+    #tempText{
+        font-size: 70px;
+        span{
+            font-size: 56px;
+        }
+    }
+
+    #cityName{
+        text-transform: uppercase;
+        font-size: 25px;
+        letter-spacing:.1em;
+        margin-bottom: 20px;
+    }
+  }
+
+  .otherInformations{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .Info{
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        gap: 10px;
+
+        i{
+            font-size: 23px;
+        }
+
+        #humidityText,#windText{
+            font-size: 20px;
+        }
+
+        .nameType{
+            font-size: 13px;
+        }
+    }
+  }
+}

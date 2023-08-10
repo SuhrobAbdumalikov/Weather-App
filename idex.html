@@ -5,9 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./sass/style/style.css" />
+    <script src="https://kit.fontawesome.com/f35ca9bb4a.js" crossorigin="anonymous"></script>
     <title>Weather App</title>
   </head>
   <body>
+    <!-- body section start -->
+
+    <div class="container">
+        <div class="weatherAppBox">
+            <div class="inPutAndBtn">
+                <input type="text" id="userInput" placeholder="Search">
+                <button id="userBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <div class="weatherIcon">
+                <i class="fa-solid fa-cloud-sun" id="weathIcon"></i>
+                <p id="tempText">22'<span>C</span></p>
+                <p id="cityName">New York</p>
+            </div>
+            <div class="otherInformations">
+                <div class="Info">
+                    <i class="fa-solid fa-water"></i>
+                    <div class="textInfo">
+                        <p id="humidityText">64%</p>
+                        <p class="nameType">Humidity</p>
+                    </div>
+                </div>
+                <div class="Info">
+                    <i class="fa-solid fa-wind"></i>
+                    <div class="textInfo">
+                        <p id="windText">18 km/h</p>
+                        <p class="nameType">Wind Speed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- body section end -->
+    <!-- ================== -->
+    <!-- Script files -->
     <script src="./js/main.js"></script>
+    <script src="./js/forecast.js"></script>
+    <!--  -->
   </body>
 </html>
