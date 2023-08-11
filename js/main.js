@@ -20,7 +20,7 @@ ChangeLocation.addEventListener("submit", (el) => {
   el.preventDefault();
   const enterName = ChangeLocation.city.value.trim();
   ChangeLocation.reset();
-   getWeather(enterName)
+  getWeather(enterName)
     .then((data) => {
       console.log(data);
       wetherCondition.textContent = `${data.weather[0].main}`;
@@ -29,18 +29,27 @@ ChangeLocation.addEventListener("submit", (el) => {
       humidityText.textContent = `${data.main.humidity}%`;
       windText.textContent = `${data.wind.speed}kn/h`;
 
-      if(wetherCondition.textContent == `${(data.weather[0].main = "Clouds")}`) {
-        weatherIcon.src = '../images/clouds.png'
-      }else if(wetherCondition.textContent == `${(data.weather[0].main = "Clear")}`) {
-       weatherIcon.src = '../images/clear.png'
-     }else if(wetherCondition.textContent == `${data.weather[0].main = "Rain"}`) {
-          weatherIcon.src = '../images/rain.png'
-     }else if(wetherCondition.textContent == `${data.weather[0].main = "Drizzle"}`) {
-          weatherIcon.src = '../images/drizzle.png'
-     }else if(wetherCondition.textContent == `${data.weather[0].main = "Mist"}`) {
-          weatherIcon.src = '../images/mist.png'
-     }
-
+      if (
+        wetherCondition.textContent == `${(data.weather[0].main = "Clouds")}`
+      ) {
+        weatherIcon.src = "../images/clouds.png";
+      } else if (
+        wetherCondition.textContent == `${(data.weather[0].main = "Clear")}`
+      ) {
+        weatherIcon.src = "../images/clear.png";
+      } else if (
+        wetherCondition.textContent == `${(data.weather[0].main = "Rain")}`
+      ) {
+        weatherIcon.src = "../images/rain.png";
+      } else if (
+        wetherCondition.textContent == `${(data.weather[0].main = "Drizzle")}`
+      ) {
+        weatherIcon.src = "../images/drizzle.png";
+      } else if (
+        wetherCondition.textContent == `${(data.weather[0].main = "Mist")}`
+      ) {
+        weatherIcon.src = "../images/mist.png";
+      }
     })
     .catch((err) => {
       tempText.textContent = `0`;
@@ -53,6 +62,6 @@ ChangeLocation.addEventListener("submit", (el) => {
 
 //====> user btn click
 userBtn.addEventListener("click", () => {
-    const enterName = ChangeLocation.city.value.trim();
-     getWeather(enterName);
-  });
+  const enterName = ChangeLocation.city.value.trim();
+  getWeather(enterName);
+});
